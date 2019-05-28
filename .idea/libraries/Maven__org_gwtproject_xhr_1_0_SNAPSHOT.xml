@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.gwtproject:xhr:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gwtproject/xhr/1.0-SNAPSHOT/xhr-1.0-20180126.045420-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gwtproject/xhr/1.0-SNAPSHOT/xhr-1.0-20180126.045420-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gwtproject/xhr/1.0-SNAPSHOT/xhr-1.0-20180126.045420-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

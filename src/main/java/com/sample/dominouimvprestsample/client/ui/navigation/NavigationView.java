@@ -3,8 +3,8 @@ package com.sample.dominouimvprestsample.client.ui.navigation;
 import com.github.mvp4g.mvp4g2.core.ui.LazyReverseView;
 import elemental2.dom.Element;
 import org.dominokit.domino.ui.icons.Icons;
-import org.dominokit.domino.ui.menu.Menu;
-import org.dominokit.domino.ui.menu.MenuItem;
+import org.dominokit.domino.ui.tree.Tree;
+import org.dominokit.domino.ui.tree.TreeItem;
 
 /**
  * Copyright (C) 2018 Frank Hossfeld <frank.hossfeld@googlemail.com>
@@ -23,7 +23,7 @@ import org.dominokit.domino.ui.menu.MenuItem;
  */
 public class NavigationView extends LazyReverseView<INavigationView.Presenter> implements INavigationView {
 
-    private Menu menu;
+    private Tree menu;
 
     public NavigationView() {
         super();
@@ -36,10 +36,12 @@ public class NavigationView extends LazyReverseView<INavigationView.Presenter> i
 
     @Override
     public void createView() {
-        menu = Menu.create("Sample");
-        MenuItem createPersonMenuItem = menu.addMenuItem("Create Person", Icons.ALL.add());
-        MenuItem editPersonMenuItem = menu.addMenuItem("Edit Person", Icons.ALL.edit());
-        createPersonMenuItem.addClickListener(evt -> presenter.doNavigateTo("create"));
-        editPersonMenuItem.addClickListener(evt -> presenter.doNavigateTo("edit"));
+        menu = Tree.create("Sample");
+        menu
+                .appendChild(TreeItem.create("Create Person", Icons.ALL.add())
+                        .addClickListener(evt -> presenter.doNavigateTo("create"))
+                )
+                .appendChild(TreeItem.create("Edit Person", Icons.ALL.edit())
+                        .addClickListener(evt -> presenter.doNavigateTo("edit")));
     }
 }
