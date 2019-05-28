@@ -42,7 +42,7 @@
         <mvp4g2.version>1.0.2-SNAPSHOT</mvp4g2.version>
 
         <!-- Elemento version -->
-        <elemento.version>0.8.1</elemento.version>
+        <elemento.version>0.8.5</elemento.version>
 
         <!-- plugin versions -->
         <plugin.version.eclipse.lifecyle>1.0.0</plugin.version.eclipse.lifecyle>

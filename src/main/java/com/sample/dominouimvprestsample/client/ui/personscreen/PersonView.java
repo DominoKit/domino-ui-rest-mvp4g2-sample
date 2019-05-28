@@ -5,14 +5,14 @@ import com.sample.dominouimvprestsample.shared.model.Person;
 import elemental2.dom.Element;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
-import org.dominokit.domino.ui.column.Column;
 import org.dominokit.domino.ui.forms.FieldsGrouping;
 import org.dominokit.domino.ui.forms.Radio;
 import org.dominokit.domino.ui.forms.RadioGroup;
 import org.dominokit.domino.ui.forms.TextBox;
+import org.dominokit.domino.ui.grid.Column;
+import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.Icons;
 import org.dominokit.domino.ui.notifications.Notification;
-import org.dominokit.domino.ui.row.Row;
 import org.dominokit.domino.ui.style.Style;
 import org.dominokit.domino.ui.utils.ElementUtil;
 
@@ -81,29 +81,29 @@ public class PersonView extends LazyReverseView<IPersonView.Presenter> implement
                 .get();
         button = Button.createPrimary("Create");
         container
-                .appendContent(Row.create()
+                .appendChild(Row.create()
                         .addColumn(Column.span12()
-                                .addElement(firstNameTextBox.setLeftAddon(Icons.ALL.label())))
+                                .appendChild(firstNameTextBox.setLeftAddon(Icons.ALL.label())))
                 )
-                .appendContent(Row.create()
+                .appendChild(Row.create()
                         .addColumn(Column.span12()
-                                .addElement(lastNameTextBox.setLeftAddon(Icons.ALL.label())))
+                                .appendChild(lastNameTextBox.setLeftAddon(Icons.ALL.label())))
                 )
-                .appendContent(Row.create()
+                .appendChild(Row.create()
                         .addColumn(Column.span12()
-                                .addElement(ElementUtil.numbersOnly(phoneNumberTextBox.setLeftAddon(Icons.ALL.phone()))))
+                                .appendChild(ElementUtil.numbersOnly(phoneNumberTextBox.setLeftAddon(Icons.ALL.phone()))))
                 )
-                .appendContent(Row.create()
+                .appendChild(Row.create()
                         .addColumn(Column.span12()
-                                .addElement(genderRadioGroup
+                                .appendChild(genderRadioGroup
                                         .addRadio(Radio.create("male", "Male"))
                                         .addRadio(Radio.create("female", "Female"))
                                         .horizontal()
                                 ))
                 )
-                .appendContent(Row.create()
+                .appendChild(Row.create()
                         .addColumn(Column.span12()
-                                .addElement(button
+                                .appendChild(button
                                         .addClickListener(evt -> Notification.createInfo("Done").show())))
                 );
     }
